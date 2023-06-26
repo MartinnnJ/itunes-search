@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+html {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* SearchBar component styles */
+
+form input {
+  display: block;
+  width: 50%;
+  padding: .4em .75em;
+  font-size: 1.5rem;
+  margin: 2em auto;
+  border: .12em solid black;
+  border-radius: 1em;
+}
+
+form input:focus {
+  outline: none;
+  box-shadow: .06em .12em .25em .3125em lightgrey;
+}
+
+form h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+/* SongsList component styles */
+
+.list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.empty {
+  text-align: center;
+  margin: 5em;
+}
+
+.empty p {
+  font-size: 2rem;
+}
+
+.empty small {
+  font-size: 4rem;
+  font-weight: 800;
+  color: grey;
+}
+
+/* Song component styles */
+
+.song {
+  position: relative;
+  width: 40%;
+  text-align: center;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 1em;
+  margin: 2em auto;
+  margin-bottom: 5em;
+}
+
+.song small {
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+  color: grey;
+}
+
+.song p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.song audio {
+  color: #f2f2f2;
+}
+
+/* RESPONSIVITY */
+
+@media only screen and (max-width: 800px) {
+  form input {
+    width: 85%;
+  }
+
+  .empty p {
+    font-size: 1.5rem;
+  }
+
+  .empty small {
+    font-size: 3rem;
+  }
+
+  .song {
+    width: 50%;
+  }
+
+  .song audio {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  form h1 {
+    font-size: 2rem;
+  }
+  
+  .song {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  form h1 {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  form input {
+    font-size: 1rem;
+  }
+
+  .empty {
+    margin: 2.5rem;
+  }
+
+  .empty p {
+    font-size: 1.25rem;
+  }
+
+  .empty small {
+    font-size: 1.75rem;
+  }
+
+  .song {
+    width: 75%;
+    padding: 1em;
+  }
+
+  .song p {
+    font-size: 1rem;
+  }
+
+  .song h2 {
+    font-size: 1.25rem;
+  }
+}
